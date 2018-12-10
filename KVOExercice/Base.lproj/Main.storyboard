@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KVOExercice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BB7-fB-5As">
+                                <rect key="frame" x="50" y="70" width="275" height="447"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aac-Wo-Ugw">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="364"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="37"/>
+                                        <color key="textColor" red="0.2666666667" green="0.36862745099999999" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="highlightedColor" red="0.2666666667" green="0.36862745099999999" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeL-cE-P8L">
+                                        <rect key="frame" x="0.0" y="364" width="275" height="80"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="-27" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="110" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="110" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Time    " image="icons8-clock-filled-50">
+                                            <color key="titleColor" red="0.2666666667" green="0.36862745099999999" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.4431372549" green="0.56862745100000001" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="updateConfiguration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6D-2B-8W6"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWZ-Wf-Kfr">
+                                        <rect key="frame" x="0.0" y="444" width="275" height="3"/>
+                                        <color key="backgroundColor" red="0.2666666667" green="0.36862745099999999" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="3" id="5u4-RF-CZe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hWZ-Wf-Kfr" firstAttribute="top" secondItem="WeL-cE-P8L" secondAttribute="top" constant="80" id="HY1-3M-A6F"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BB7-fB-5As" secondAttribute="trailing" constant="50" id="kXF-wS-YtN"/>
+                            <constraint firstItem="BB7-fB-5As" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="noi-bR-hCB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BB7-fB-5As" secondAttribute="bottom" constant="150" id="thQ-Sh-QFp"/>
+                            <constraint firstItem="BB7-fB-5As" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="xjS-Ef-SR4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="TimeLabel" destination="Aac-Wo-Ugw" id="rPg-Cq-xPJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="25.637181409295355"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-clock-filled-50" width="50" height="50"/>
+    </resources>
+</document>
